@@ -1,6 +1,7 @@
 <?php
 include('admin/conn.php'); 
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +32,11 @@ include('admin/conn.php');
   <div class="row">
     <?php
       $sql = "SELECT * FROM products";
+
+      if(isset($_GET['keyword']) && $_GET['keyword'] !=''){
+        $sql .= " WHERE product_name  LIKE '%".$_GET['keyword']."%'";
+      }
+    
       $pro_result = mysqli_query($conn,$sql);
     ?>
    

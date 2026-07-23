@@ -136,8 +136,8 @@ footer {
     </button>
 
     <div class="collapse navbar-collapse" id="menu">
-      <form class="d-flex mx-auto search-box">
-        <input class="form-control" id="search" type="search" placeholder="Search Women's Fashion">
+      <form method="GET" action="search.php" class="d-flex mx-auto search-box">
+        <input name="keyword" class="form-control" id="search" type="search" placeholder="Search Women's Fashion">
       </form>
 
       <ul class="navbar-nav ms-auto">
